@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+        body{
+            background-color:lightblue;
+        }
+
+
+		.dots{
+			display: inline-flex;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		.circle{
+			background-color: blue;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			margin: 5px;
+			animation-name: wave;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		.circle1:nth-child(1){
+			animation-delay:-0.25s;
+		}
+		.circle2:nth-child(2){
+			background-color: red;
+			animation-delay:-0.5s;
+		}
+		.circle3:nth-child(3){
+			background-color:rgb(0, 255, 38) ;
+			animation-delay:-0.75s;
+		}
+		.circle4:nth-child(4){
+			background-color:rgb(218, 237, 14) ;
+			animation-delay: 1s;
+		}
+		@keyframes wave {
+			0%{
+              transform: translatey(-5px);
+			}
+			100%{
+               transform: translateY(10px);
+			}
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="dots">
+		<div class="circle1 circle"></div>
+		<div class="circle2 circle"></div>
+		<div class="circle3 circle"></div>
+		<div class="circle4 circle"></div>
+	</div>
+</body>
+</html>
